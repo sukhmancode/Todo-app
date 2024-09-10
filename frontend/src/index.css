@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+[data-theme="Light"]{
+  --main-bg-color:#ffffff55;
+  --background-color:#fff;
+  --color:#484b6a;
+  --bg-image:url('bg-desktop-light.jpg')
+
+}
+[data-theme="Dark"]{
+  --main-bg-color: hsl(235, 21%, 11%);
+  --background-color:#25273c;
+  --color:#777a92;
+  --bg-image:url('bg-desktop-dark.jpg')
+}
+body{
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: var(--main-bg-color);
+  background-image: var(--bg-image);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:var(--color);
+}
+.main-root{
+  display: flex;
+  flex-direction: column;
+  gap:0.5rem;
+}
+.header{
+  margin:50px 0px 20px 0px;
+  gap: 20rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+.heading{
+  font-size: 36px;
+  letter-spacing: 15px;
+  font-weight: 700;
+  color:#fff;
+}
+input{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+input[type="text"]{
+  width: 100%;
+  padding: 1rem 1rem;
+  border: none;
+  outline: none;
+  background-color: var(--background-color);
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;  
+  border-radius: 4px;
+  color: var(--color);
+  
+}
+input[type="email"] {
+  margin-top: 10px;
+  width: 100%;
+  padding: 1rem 0.5rem;
+  background-color: var(--background-color);
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;  
+  border-radius: 4px;
+  color: var(--color);
+  
+}
+input[type="password"] {
+  margin-top: 10px;
+  width: 100%;
+  padding: 1rem 0.5rem;
+  background-color: var(--background-color);
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;  
+  border-radius: 4px;
+  color: var(--color);
+  
+}
+.name-email-area input[type="text"] {
+  position: relative;
+  border: 1px solid #ccc;
+
+}
+.input-field{
+  
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.sign-up-form {
+  width: 100vw;
+  height: 100vh;
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #7928CA   0%, #FF0080);
+  display: flex;
+  justify-content: center;
+}
+.form-area {
+  border-radius: 8px;
+  padding:20px 50px;
+  align-self: center;
+  width: fit-content;
+  background-color: #fff;
+}
+.form-area button {
+
+  font-family: 'Josefin Sans', sans-serif;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  margin-block: 10px;
+  padding: 15px;
+  background-color: #000000;
+  color:#fff;
+  width: 100%;
+
+}
+.form-area button:hover{
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+  opacity: 0.80;;
+}
+.input-before{
+  left:5px;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+}
+.input-after{
+  background-image: linear-gradient( hsl(192, 100%, 67%),hsl(280, 87%, 65%));
+  left:5px;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+}
+.mode-set{
+  cursor: pointer;
+  color:#fff;
+  border: none;
+outline: none;
+}
+.mode-set:hover{
+border-radius: 50%;
+  box-shadow:  0 0 10px var(--main-bg-color);
+}
+
+.information{
+  display: flex;
+  align-items: center;
+  background-color:  var(--background-color);
+  padding: 1.2rem;
+  justify-content: space-between;
+  color: #777a92;
+  border-radius: 4px;
+  box-shadow: 0 0 1px #ccc;
+}
+.sub-info{
+  display: flex;
+  gap:0.6rem;
+}
+.information p:hover{
+  color:#ccc;
+  cursor: pointer;
+}
+.todo{
+  transform: translateY(1rem);
+  color:var(--color);
+  position: relative;
+  padding:1.2rem 2rem;
+  box-shadow: 0 0 1px #ccc;
+  background-color:var(--background-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.todo img {
+  position: absolute;
+  cursor: pointer;
+  right: 3%;
+}
+.todo-wrap{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.completed-txt:hover{
+  cursor: pointer;
+  color:#ccc;
+
+}
+.active-status{
+  color:#57ddff;
+}
+@media screen and (max-width:550px) {
+  body{
+    background-size: 100% 50%;
+  }
+  .main-root{
+align-items: center;
+    justify-content: center;
+  }
+  input[type="text"]{
+    width: 400px;
+  }
+  .todo{
+    width: 400px;
+  }
+  .header{
+    justify-content: space-evenly;
+    gap:0rem;
+  }
+  .information{
+    width: 400px;
+    padding: 1.2rem .2rem;
+    justify-content: space-between;
+  }
+  
+}
+@media screen and (max-width:400px) {
+  input[type="text"]{
+    width: 320px;
+  }
+  .todo{
+    width: 320px;
+  }
+  .information{
+    font-size: 13px;
+    width: 320px;
+    padding: 1.5rem 0rem ;
+  
+  }
+  
+}
